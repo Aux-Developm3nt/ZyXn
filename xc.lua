@@ -425,7 +425,7 @@ function SimpleUI:CreateWindow(title)
         SimpleUI:Create("UIPadding", {
             PaddingTop = UDim.new(0, 5),
             PaddingBottom = UDim.new(0, 5),
-            PaddingLeft = UDim.new(0, 10),
+            PaddingLeft = UDim.new(0, 5),  -- Fixed: Changed from 10 to 5
             PaddingRight = UDim.new(0, 5),
             Parent = content
         })
@@ -523,7 +523,7 @@ function SimpleUI:CreateWindow(title)
             local toggle = SimpleUI:Create("Frame", {
                 Size = UDim2.new(0, 18, 0, 18),
                 Position = UDim2.new(1, -25, 0.5, -9),
-                BackgroundColor3 = state and Color3.fromRGB(255, 65, 65) or Color3.fromRGB(60, 60, 60), -- Same as main
+                BackgroundColor3 = state and Color3.fromRGB(255, 65, 65) or Color3.fromRGB(60, 60, 60),
                 BorderSizePixel = 1,
                 BorderColor3 = Color3.fromRGB(80, 80, 80), 
                 Parent = frame
@@ -650,7 +650,6 @@ function SimpleUI:CreateWindow(title)
                 Text = "",
                 PlaceholderText = placeholder,
                 TextColor3 = Color3.fromRGB(255, 255, 255), 
-                
                 PlaceholderColor3 = Color3.fromRGB(150, 150, 150), 
                 TextSize = 14, 
                 Font = Enum.Font.Gotham,
